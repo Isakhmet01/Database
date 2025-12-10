@@ -554,9 +554,6 @@ Improvement: ~50x faster
 5) Expression index → enables fast LOWER(email) case-insensitive searching.
 6) Hash index → very fast equality lookup for phone numbers.
 7–8) GIN JSONB indexes → required for all JSONB queries using @>, ?, etc.
-
-These indexes combined drastically improve query performance and fully satisfy
-Task 3 requirements.
 */
 
 
@@ -716,4 +713,5 @@ CALL process_salary_batch('KZ01001A000000000001','[{"iin":"000000000000","amount
 -- COMMIT;
 -- Session 2 (now proceeds):
 -- SELECT * FROM accounts WHERE account_id = 1 FOR UPDATE;
+
 
